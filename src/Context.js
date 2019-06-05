@@ -27,7 +27,6 @@ class RoomProvider extends Component {
 				content_type: "beachResort",
 				order: "sys.createdAt"
 			});
-			console.log(response.items);
 			let rooms = this.formatData(response.items);
 			let featuredRooms = rooms.filter(room => room.featured === true);
 			let maxPrice = Math.max(...rooms.map(item => item.price));
